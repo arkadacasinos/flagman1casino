@@ -1,0 +1,271 @@
+/* ============================================================
+   Flagman Casino — собственные стили (без сторонних библиотек)
+   ============================================================ */
+
+:root {
+  --f7xq-green: #0b3b2e;
+  --f7xq-green-deep: #072a21;
+  --f7xq-green-soft: #124a3a;
+  --f7xq-gold: #c9a227;
+  --f7xq-gold-light: #e6c65c;
+  --f7xq-cream: #f6f1e4;
+  --f7xq-cream-dim: #ece4d0;
+  --f7xq-ink: #101512;
+  --f7xq-ink-soft: #2b342f;
+  --f7xq-line: rgba(201, 162, 39, 0.28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--f7xq-cream);
+  color: var(--f7xq-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- каркас ---------- */
+.f7xq-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.f7xq-wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- шапка / герой ---------- */
+.f7xq-hero {
+  background: linear-gradient(160deg, var(--f7xq-green-deep) 0%, var(--f7xq-green) 100%);
+  color: var(--f7xq-cream);
+  padding: 52px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.f7xq-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.f7xq-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--f7xq-gold-light);
+  font-weight: 600;
+}
+
+.f7xq-kicker::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--f7xq-gold);
+  border-radius: 2px;
+}
+
+.f7xq-title {
+  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 7.2vw, 52px);
+  line-height: 1.12;
+  font-weight: 700;
+  color: var(--f7xq-cream);
+  text-wrap: balance;
+}
+
+.f7xq-accent {
+  color: var(--f7xq-gold-light);
+}
+
+.f7xq-lead {
+  font-size: 17px;
+  color: rgba(246, 241, 228, 0.84);
+  max-width: 640px;
+}
+
+.f7xq-hero-media {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--f7xq-line);
+}
+
+/* ---------- секции ---------- */
+.f7xq-section {
+  padding: 46px 0;
+}
+
+.f7xq-section--alt {
+  background: var(--f7xq-cream-dim);
+}
+
+.f7xq-section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.f7xq-h2 {
+  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 5vw, 34px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--f7xq-green-deep);
+  text-wrap: balance;
+}
+
+.f7xq-h2 .f7xq-accent {
+  color: var(--f7xq-gold);
+}
+
+.f7xq-text {
+  font-size: 16px;
+  color: var(--f7xq-ink-soft);
+  max-width: 720px;
+}
+
+.f7xq-text + .f7xq-text {
+  margin-top: 12px;
+}
+
+.f7xq-media {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--f7xq-line);
+}
+
+/* ---------- карточки преимуществ ---------- */
+.f7xq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.f7xq-card {
+  background: #fff;
+  border: 1px solid var(--f7xq-line);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.f7xq-card-title {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--f7xq-green-deep);
+  margin-bottom: 8px;
+}
+
+.f7xq-card-text {
+  font-size: 15px;
+  color: var(--f7xq-ink-soft);
+}
+
+/* ---------- подвал ---------- */
+.f7xq-footer {
+  background: var(--f7xq-green-deep);
+  color: var(--f7xq-cream);
+  padding: 46px 0 38px;
+}
+
+.f7xq-footer-title {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--f7xq-gold-light);
+}
+
+.f7xq-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.f7xq-tag {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--f7xq-cream);
+  background: rgba(201, 162, 39, 0.14);
+  border: 1px solid var(--f7xq-line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.f7xq-tag:hover,
+.f7xq-tag:focus-visible {
+  background: var(--f7xq-gold);
+  color: var(--f7xq-green-deep);
+}
+
+.f7xq-footer-note {
+  margin-top: 26px;
+  font-size: 13px;
+  color: rgba(246, 241, 228, 0.55);
+  max-width: 720px;
+}
+
+/* ---------- адаптив (mobile-first) ---------- */
+@media (min-width: 720px) {
+  .f7xq-hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+  .f7xq-hero-copy {
+    flex: 1 1 55%;
+  }
+  .f7xq-hero-media {
+    flex: 1 1 45%;
+  }
+  .f7xq-section-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+  .f7xq-section-inner--reverse {
+    flex-direction: row-reverse;
+  }
+  .f7xq-section-copy {
+    flex: 1 1 55%;
+  }
+  .f7xq-section-media {
+    flex: 1 1 45%;
+  }
+  .f7xq-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
